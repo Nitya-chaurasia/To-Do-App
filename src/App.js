@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 // import bg from "./assets/time.jpg";
 import "./App.css";
-// import { FaTrash } from "react-icons/fa";
+import { Trash2 } from "lucide-react";
 import { useTodos } from "./useTodos";
 import TodoFilter from "./TodoFilter";
 
@@ -82,7 +82,11 @@ function App() {
               <span className="deadline">{getDeadlineText(todo.deadline)}</span>
             </div>
 
-            <span className="delete" onClick={() => deleteTodo(todo.id)} >del</span>
+            <Trash2
+  className="delete"
+  size={18}  // icon ka size (px me)
+  onClick={() => deleteTodo(todo.id)}
+/>
           </div>
         ))}
       </div>

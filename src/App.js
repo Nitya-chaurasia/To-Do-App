@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 // import bg from "./assets/time.jpg";
 import "./App.css";
-import { FaTrash } from "react-icons/fa";
+// import { FaTrash } from "react-icons/fa";
 import { useTodos } from "./useTodos";
 import TodoFilter from "./TodoFilter";
 
@@ -82,7 +82,7 @@ function App() {
               <span className="deadline">{getDeadlineText(todo.deadline)}</span>
             </div>
 
-            <FaTrash className="delete" onClick={() => deleteTodo(todo.id)} />
+            <span className="delete" onClick={() => deleteTodo(todo.id)} >del</span>
           </div>
         ))}
       </div>
